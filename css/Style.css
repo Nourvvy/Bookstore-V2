@@ -1,0 +1,109 @@
+/* strat variables*/
+:root {
+  --main-color: #7888ff;
+  --menu-color: #2f3434a0;
+  --font-color: white;
+}
+/* end variables*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1;
+}
+.container {
+  width: 800px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+header {
+  width: 100%;
+  height: 80px;
+  border: 2px solid ;
+  border-color: black;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 80px;
+}
+header .logo img {
+  width: 100%;
+}
+.isection {
+  display: flex;
+  width: 150px;
+  height: 250px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translatey(105px) translatex(35px);
+}
+.isection span {
+  top: 10px;
+  position: absolute;
+  border: solid 15px;
+  border-color: black transparent transparent transparent;
+  width: 10px;
+  height: 10px;
+}
+.isection ul {
+  list-style-type: none;
+  background-color: var(--menu-color);
+  color: var(--font-color);
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 0.5s;
+  z-index: 100;
+}
+.isection ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px 20px;
+  width: 100%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.isection ul li:not(:last-child) {
+  border: 1.2px solid;
+  border-color: transparent transparent black transparent;
+}
+.isection ul li a {
+  transition-duration: 0.3s;
+}
+.isection ul li:hover a {
+  transform: translatex(15px);
+}
+.isection:hover ul {
+  opacity: 1;
+}
+.content {
+  background-image: url("../photos/photo1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 120px);
+}
+.content h1 {
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
