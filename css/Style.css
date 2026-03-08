@@ -129,6 +129,8 @@ header .logo img {
   color: var(--font-color);
   font-weight: bold;
   margin-top: 50px;
+  text-transform: capitalize;
+  text-wrap: wrap;
 }
 @media (min-width: 768px) {
   .content .intro p {
