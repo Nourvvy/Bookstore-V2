@@ -164,6 +164,7 @@ header .logo img {
   text-shadow: 0px 0px 20px var(--romantic-color);
   box-shadow: 0px 0px 10px 0px var(--romantic-color) ,0px 0px 10px 0px var(--romantic-color) inset ;
   width: fit-content;
+  text-transform: capitalize;
 }
 @media (max-width: 768px) {
   .content .romantic h2 {
