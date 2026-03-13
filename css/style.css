@@ -4,8 +4,28 @@
   --menu-color: #2f3434a0;
   --font-color: white;
   --romantic-color: #ff2f87;
+  --romantic-color2: #d20000;
+  
+  /* Gryffindor - الشجاعة */
+  --gryffindor-red: #740001;
+  --gryffindor-gold: #D3A625;
+
+  /* Slytherin - الطموح */
+  --slytherin-green: #1A472A;
+  --slytherin-silver: #AAAAAA;
+
+  /* Ravenclaw - الذكاء */
+  --ravenclaw-blue: #0E1A40;
+  --ravenclaw-bronze: #946B2D;
+
+  /* Hufflepuff - الوفاء */
+  --hufflepuff-yellow: #ECB939;
+  --hufflepuff-black: #372E29;
 }
 /* end variables*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   padding: 0;
   margin: 0;
@@ -95,6 +115,8 @@ header .logo img {
   border-color: transparent transparent black transparent;
 }
 .isection ul li a {
+  text-decoration: none;
+  color: var(--font-color);
   transition-duration: 0.3s;
 }
 .isection ul li:hover a {
@@ -110,7 +132,9 @@ header .logo img {
 .content .intro {
   background-image: url("../photos/photo1.jpg");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #5d5d5d;
   height: calc(100vh - 90px);
 }
 .content .intro h1 {
@@ -144,10 +168,13 @@ header .logo img {
 .content .romantic {
   background-image: url("../photos/photo2.jpg");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
   margin: 0px;
-  height: calc(100vh);
   margin-top: 5px;
+  background-color: #ffc3dc;
+  min-height: 100vh;
 }
 .content .romantic h2 {
   color: var(--font-color);
@@ -158,11 +185,11 @@ header .logo img {
   padding: 10px 40px;
   font-weight: bold;
   font-size: 55px;
-  border: 1px solid ;
+  border: 2px solid ;
   border-color: var(--romantic-color);
   border-radius: 10px;
   text-shadow: 0px 0px 20px var(--romantic-color);
-  box-shadow: 0px 0px 10px 0px var(--romantic-color) ,0px 0px 10px 0px var(--romantic-color) inset ;
+  box-shadow: 0px 0px 20px 2px var(--romantic-color) ,0px 0px 20px 2px var(--romantic-color) inset ;
   width: fit-content;
   text-transform: capitalize;
 }
@@ -171,10 +198,11 @@ header .logo img {
     font-size: 35px;
   }
 }
-.content .romantic p {
+.content .romantic .tag {
   color: var(--font-color);
   font-weight: bold;
   margin-top: 30px;
+  margin-bottom: 100px;
   text-transform: capitalize;
   text-wrap: wrap;
   text-align: center;
@@ -185,3 +213,137 @@ header .logo img {
     font-size: 35px;
   }
 }
+.books {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+.books .book-card {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; /* نفس عرض المربع اللي أنت عامله */
+}
+.romantic .books .book-card .b {
+  width: 200px;
+  height: 250px;
+  margin: 0px 0px;
+  background-color: var(--romantic-color);
+  box-shadow: 0px 0px 20px 2px var(--romantic-color)
+}
+.romantic p:not(.tag) {
+  color: var(--font-color);
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+  text-shadow: 0px 0px 10px var(--romantic-color2);
+}
+.romantic p:last-child {
+  margin-bottom: 100px;
+}
+/* start fantasy */
+.content .fantasy {
+  background-image: url("../photos/photo3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  margin: 0px;
+  margin-top: 5px;
+  background-color: var(--gryffindor-red);
+  min-height: 100vh;
+}
+.content .fantasy h2 {
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  margin-top: 105px;
+  padding: 10px 40px;
+  font-weight: bold;
+  font-size: 55px;
+  border: 2px solid ;
+  border-color: var(--slytherin-silver);
+  border-radius: 10px;
+  text-shadow: 0px 0px 20px var(--slytherin-green);
+  box-shadow: 0px 0px 20px 2px var(--slytherin-green) ,0px 0px 20px 2px var(--slytherin-green) inset ;
+  width: fit-content;
+  text-transform: capitalize;
+  animation-name: harry;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: ;
+  animation-timing-function: linear;
+}
+@media (max-width: 768px) {
+  .content .fantasy h2 {
+    font-size: 35px;
+  }
+}
+.content .fantasy .tag {
+  color: var(--font-color);
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  text-transform: capitalize;
+  text-wrap: wrap;
+  text-align: center;
+  text-shadow: 0px 0px 20px var(--slytherin-green);
+}
+@media (min-width: 768px) {
+  .content .fantasy p {
+    font-size: 35px;
+  }
+}
+.fantasy .books .book-card .b {
+  width: 200px;
+  height: 250px;
+  margin: 0px 0px;
+  background-color: var(--ravenclaw-blue);
+  box-shadow: 0px 0px 20px 2px var(--slytherin-green)
+}
+.fantasy p:not(.tag) {
+  color: var(--font-color);
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+  text-shadow: 0px 0px 10px var(--slytherin-green);
+}
+.fantasy p:last-child {
+  margin-bottom: 100px;
+}
+/* @keyframes harry {
+  24% {
+    border-color: var(--slytherin-silver);
+  border-radius: 10px;
+  text-shadow: 0px 0px 20px var(--slytherin-green);
+  box-shadow: 0px 0px 20px 2px var(--slytherin-green) ,0px 0px 20px 2px var(--slytherin-green) inset ;
+  }
+  25% {
+  border-color: var(--gryffindor-gold);
+  text-shadow: 0px 0px 20px var(--gryffindor-red);
+  box-shadow: 0px 0px 20px 2px var(--gryffindor-red) ,0px 0px 20px 2px var(--gryffindor-red) inset ;
+  }
+  50% {
+    border-color: var(--hufflepuff-black);
+  text-shadow: 0px 0px 20px var(--hufflepuff-yellow);
+  box-shadow: 0px 0px 20px 2px var(--hufflepuff-yellow) ,0px 0px 20px 2px var(--hufflepuff-yellow) inset ;
+  }
+  75% {
+    border-color: var(--ravenclaw-bronze);
+  text-shadow: 0px 0px 20px var(--ravenclaw-blue);
+  box-shadow: 0px 0px 20px 2px var(--ravenclaw-blue) ,0px 0px 20px 2px var(--ravenclaw-blue) inset ;
+  }
+  100% {
+    border-color: var(--ravenclaw-bronze);
+  text-shadow: 0px 0px 20px var(--ravenclaw-blue);
+  box-shadow: 0px 0px 20px 2px var(--ravenclaw-blue) ,0px 0px 20px 2px var(--ravenclaw-blue) inset ;
+  }
+} */
