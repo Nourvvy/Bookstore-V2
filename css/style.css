@@ -27,6 +27,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: Protest Revolution;
   padding: 0;
   margin: 0;
 }
@@ -136,9 +137,12 @@ header .logo img {
   background-position: top;
   background-color: #5d5d5d;
   height: calc(100vh - 90px);
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .content .intro h1 {
   color: var(--font-color);
+  text-shadow: 0px 0px 10px black;
   display: flex;
   justify-content: center;
   margin: 0px;
@@ -154,8 +158,10 @@ header .logo img {
 }
 .content .intro p {
   color: var(--font-color);
+  text-shadow: 0px 0px 10px black;
   font-weight: bold;
-  margin-top: 50px;
+  font-size: 20px;
+  margin-top: 40px;
   text-transform: capitalize;
   text-wrap: wrap;
   text-align: center;
@@ -166,6 +172,7 @@ header .logo img {
   }
 }
 .content .romantic {
+  font-family: Emilys Candy;
   background-image: url("../photos/photo2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -249,6 +256,8 @@ header .logo img {
 }
 /* start fantasy */
 .content .fantasy {
+  font-family: Griffy;
+  letter-spacing: 2px;
   background-image: url("../photos/photo3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -319,31 +328,120 @@ header .logo img {
 .fantasy p:last-child {
   margin-bottom: 100px;
 }
-/* @keyframes harry {
-  24% {
-    border-color: var(--slytherin-silver);
-  border-radius: 10px;
-  text-shadow: 0px 0px 20px var(--slytherin-green);
-  box-shadow: 0px 0px 20px 2px var(--slytherin-green) ,0px 0px 20px 2px var(--slytherin-green) inset ;
+.about-us {
+  margin-top: 5px;
+  background-color: #5d5d5d;
+  background: linear-gradient(180deg, #0E1A40, #5d5d5d);
+  padding: 5% 10%;
+  color: white;
+}
+.about-us h2 {
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 0px 0px 10px black;
+  letter-spacing: -1px;
+}
+@media  (min-width: 768px) {
+  .about-us h2 {
+    font-size: 35px;
   }
-  25% {
-  border-color: var(--gryffindor-gold);
-  text-shadow: 0px 0px 20px var(--gryffindor-red);
-  box-shadow: 0px 0px 20px 2px var(--gryffindor-red) ,0px 0px 20px 2px var(--gryffindor-red) inset ;
+}
+.about-us p {
+  margin-top: 10px;
+  font-size: 17px;
+}
+.about-us span:nth-child(1) {
+  color: #ff5f1a;
+}
+.about-us span:nth-child(2) {
+  color: #0868ff;
+}
+@media  (min-width: 768px) {
+  .about-us p {
+    font-size: 25px;
   }
-  50% {
-    border-color: var(--hufflepuff-black);
-  text-shadow: 0px 0px 20px var(--hufflepuff-yellow);
-  box-shadow: 0px 0px 20px 2px var(--hufflepuff-yellow) ,0px 0px 20px 2px var(--hufflepuff-yellow) inset ;
+}
+.contact-us {
+  background-color: #000;
+  background: linear-gradient(180deg, #0E1A40, #000);
+  padding: 5% 10%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  border-top: 2px solid black;
+}
+.contact-us .flex {
+  display: flex;
+  flex-direction: row;
+}
+.contact-us h2 {
+  text-transform: capitalize;
+  text-shadow: 0px 0px 5px white;
+  letter-spacing: 2px;
+}
+@media (min-width: 768px) {
+  .contact-us h2 {
+    font-size: 40px;
   }
-  75% {
-    border-color: var(--ravenclaw-bronze);
-  text-shadow: 0px 0px 20px var(--ravenclaw-blue);
-  box-shadow: 0px 0px 20px 2px var(--ravenclaw-blue) ,0px 0px 20px 2px var(--ravenclaw-blue) inset ;
+}
+.contact-us div a {
+  text-decoration: none;
+  color:white;
+  font-size: 30px;
+  margin: 0px 15px;
+  box-shadow: 0px 0px 5px 0px #eee;
+  transition-duration: 0.5s;
+}
+.contact-us .instagram:hover:nth-child(1) a {
+  box-shadow: 0px 0px 10px 2px #eee;
+}
+.contact-us .github:hover:nth-child(2) a {
+  box-shadow: 0px 0px 10px 2px #eee;
+}
+@media (min-width: 768px) {
+  .contact-us div a {
+    font-size: 60px;
   }
-  100% {
-    border-color: var(--ravenclaw-bronze);
-  text-shadow: 0px 0px 20px var(--ravenclaw-blue);
-  box-shadow: 0px 0px 20px 2px var(--ravenclaw-blue) ,0px 0px 20px 2px var(--ravenclaw-blue) inset ;
+}
+.contact-us .instagram a {
+  text-decoration: none;
+  background: linear-gradient(125deg, #5c00dc, red);
+  border-radius: 30%;
+}
+.contact-us .github a {
+  text-decoration: none;
+  background: black;
+  border-radius: 30%;
+}
+.contact-us div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 15px;
+}
+.contact-us div p {
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 0px 0px 5px white;
+}
+@media (min-width: 768px) {
+  .contact-us div p {
+    font-size: 25px;
   }
-} */
+}
+.romantic .books .book-card:hover .b {
+  box-shadow: 0px 0px 20px 5px var(--romantic-color);
+}
+.fantasy .books .book-card:hover .b {
+  box-shadow: 0px 0px 20px 10px var(--slytherin-green);
+}
+.book-card .b {
+  transition-duration: 0.5s;
+}
+.book-card .b img {
+  width: 100%;
+  height: 100%;
+}
